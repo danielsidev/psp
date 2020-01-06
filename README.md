@@ -15,9 +15,9 @@ A aplicação foi feita com o PostgreSQL.
 O nome do banco e o usuário da aplicação encontram-se em variáriveis de ambiente que para ambiente local foram setadas no script npm run local.
 Para os ambientes dev, homolog e production, encontram-se no arquivo ecosystem.config.js.
 Essas informações foram alocadas nesse arquivo a título de teste desses ambientes em uma máquina local. 
-Para um teste real em um servidor online, esse valores devem ser apagados e as variváveis de ambiente que a aplicação utiliza devem ser criadas no servidor.
+Para um teste real, em um servidor online, esses valores devem ser apagados e as variváveis de ambiente que a aplicação utiliza devem ser criadas no servidor.
 
-Após a instalação das dependências deve ser criar um banco com o nome , usuário e senha informados na variáveis de ambiente.
+Após a instalação das dependências deve-se criar um banco com o nome , usuário e senha informados na variáveis de ambiente.
 
 Com o banco criado rode o comando:
 ```sh
@@ -56,9 +56,13 @@ $ npm run prod
  ---
  # Postman 
  ---
- Para verfiicar os endpoints da aplicação, deve-se immportar no Postman a collection Pagar.me.postman_collection.json que encontra-se na rais do projeto /postman na raiz do projeto.
+ Para verfiicar os endpoints da aplicação, deve-se immportar no Postman a collection Pagar.me.postman_collection.json que encontra-se na raiz do projeto /postman na raiz do projeto.
  >./postman/Pagar.me.postman_collection.json
  
+ ---
+# Sobre Autenticação
+Esse serviço não foi feito com autenticação( o que é bem simples e mais comum para serviços via API com JWT ), por que presumiu-se que o mesmo seria avaliado somente seguindo as informações que constavam nas regras de negócio. E como as  regras não solicitavam autenticação, esta não foi feita. No entanto, dado a modularização do serviço, uma autenticação é facilmente acoplada.
+
  ---
  # Rotas da Aplicação
  #### Host: localhost:7000
