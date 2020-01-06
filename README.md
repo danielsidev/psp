@@ -102,7 +102,7 @@ Examplo: http://localhost:7000/transaction
 ```
 {
     "success": false,
-    "error": ""We can not registerd the transaction. Please, try later!"
+    "error": "We can not registerd the transaction. Please, try later!"
 }
 ```
 ---
@@ -156,10 +156,11 @@ Exemplo: http://localhost:7000/transactions/limit/offset/1/0
 ---
 ## Consulta os Totais de Pagamentos
 Realiza a busca dos totais e pagamentos feitos divididos em dois montantes: waiting_funds e avaible pelo id do cliente.
+
 |Request| GET|
 |---|---| 
 |Content-Type|application/json| 
-|Rota|/transactions/payables/totals:id| 
+|Rota|/payables/totals/:id| 
 
 ```
 Exemplo: http://localhost:7000/payables/totals/1
