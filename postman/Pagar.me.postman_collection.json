@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "2bba94d3-394d-43ae-8f5e-04b4f7454c13",
+		"name": "Pagar.me",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_client\":1,\n    \"payment_method\":\"credit_card\",\n    \"transaction_value\":\"3000.99\",\n    \"description\":\"TV 50 Polegadas 4k\",\n    \"card_number\":\"1132 3456 0989 9000\",\n    \"cardholder_name\":\"LUCAS MATOS\",\n    \"cvv\":465,\n     \"validate_date\":\"2021-12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transctions Paged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/transactions/limit/offset/10/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"transactions",
+						"limit",
+						"offset",
+						"10",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Payament Totals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/payables/totals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"payables",
+						"totals"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
