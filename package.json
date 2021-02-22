@@ -28,7 +28,7 @@
     "compression": "^1.6.2",
     "config": "^1.28.1",
     "cors": "^2.8.3",
-    "ejs": "^1.0.0",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
     "helmet": "^3.6.0",
     "jsonwebtoken": "^5.7.0",
